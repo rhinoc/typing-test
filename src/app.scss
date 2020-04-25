@@ -1,0 +1,69 @@
+.App {
+  .navbar {
+    display: none;
+    background-color: black;
+    a {
+      color: white;
+      margin: 0 20px;
+    }
+  }
+  .container {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    #word-list {
+      display: grid;
+      grid-template-columns: repeat(5, 20%);
+      grid-template-rows: repeat(2, 45%);
+      grid-row-gap: 10%;
+      justify-content: center;
+      align-items: stretch;
+      color: white;
+      background-color: black;
+      border-radius: 0.4em;
+      width: 40vh;
+      min-width: 350px;
+      height: 100px;
+      padding: 5px;
+      margin-bottom: 1em;
+      .word-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        p {
+          font-size: 1em;
+          line-height: 1em;
+          margin: 0;
+        }
+        &.current {
+          border: 1px solid white;
+          border-radius: 0.4em;
+        }
+        &.correct {
+          color: gray;
+        }
+        &.wrong {
+          color: red;
+        }
+      }
+    }
+    #typing-container {
+      display: flex;
+      align-items: center;
+      width: 40vh;
+      min-width: 300px;
+
+      button {
+        margin-left: 5px;
+      }
+    }
+    #result {
+      height: 30px;
+      text-align: center;
+      font-size: large;
+    }
+  }
+}
